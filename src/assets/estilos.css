@@ -1,0 +1,150 @@
+/* Fondo animado para toda la app */
+body {
+  --y-0: 93%;
+  --c-0: hsla(212, 0%, 0%, 1);
+  --x-0: 93%;
+  --x-1: 26%;
+  --c-1: hsla(212, 0%, 0%, 1);
+  --y-1: 9%;
+  --x-2: 15%;
+  --c-2: hsla(257, 91%, 27%, 0.35);
+  --y-2: 79%;
+  --c-3: hsla(212, 100%, 50%, 0.5);
+  --x-3: 40%;
+  --y-3: 104%;
+  --c-4: hsla(224, 72%, 36%, 1);
+  --y-4: 60%;
+  --x-4: 0%;
+  --c-5: hsla(248, 52%, 24%, 1);
+  --y-5: 37%;
+  --x-5: 92%;
+  --c-6: hsla(212, 100%, 50%, 0.19);
+  --y-6: 16%;
+  --x-6: 101%;
+  --c-7: hsla(227, 98%, 53%, 1);
+  --x-7: 90%;
+  --y-7: 13%;
+  --y-8: 56%;
+  --c-8: hsla(166, 71%, 60%, 0.32);
+  --x-8: 104%;
+  --y-9: 19%;
+  --x-9: 97%;
+  --c-9: hsla(219, 83%, 23%, 0.18);
+
+  background-color: hsla(305, 0%, 0%, 1);
+  background-image:
+    radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0, 0%), transparent var(--s-end-0, 100%)),
+    radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1, 0%), transparent var(--s-end-1, 100%)),
+    radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2, 0%), transparent var(--s-end-2, 100%)),
+    radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3, 0%), transparent var(--s-end-3, 100%)),
+    radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4, 0%), transparent var(--s-end-4, 100%)),
+    radial-gradient(circle at var(--x-5) var(--y-5), var(--c-5) var(--s-start-5, 0%), transparent var(--s-end-5, 100%)),
+    radial-gradient(circle at var(--x-6) var(--y-6), var(--c-6) var(--s-start-6, 0%), transparent var(--s-end-6, 100%)),
+    radial-gradient(circle at var(--x-7) var(--y-7), var(--c-7) var(--s-start-7, 0%), transparent var(--s-end-7, 100%)),
+    radial-gradient(circle at var(--x-8) var(--y-8), var(--c-8) var(--s-start-8, 0%), transparent var(--s-end-8, 100%)),
+    radial-gradient(circle at var(--x-9) var(--y-9), var(--c-9) var(--s-start-9, 0%), transparent var(--s-end-9, 100%));
+  background-blend-mode: normal;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  animation: hero-gradient-animation 10s linear infinite alternate;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+/* Botón animado */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap");
+
+.btn-animado {
+  width: auto;
+  height: 70px;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #6c6962;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 0;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem;
+  border-radius: 10px;
+}
+
+.btn-animado a {
+  text-decoration: none;
+  color: #000;
+  z-index: 1000;
+}
+
+.btn-animado::after {
+  content: "";
+  position: absolute;
+  color:aliceblue;
+  top: 0;
+  left: 0;
+  width: 110px;
+  height: 70px;
+  background: linear-gradient(to right, #2c2727, #5261b6);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 500;
+}
+
+.btn-animado:hover {
+  box-shadow: -5px -5px 0 0;
+  transform: scale(0.9);
+}
+
+.btn-animado:hover::after {
+  opacity: 1;
+}
+
+
+input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    }
+
+body.loading {
+  overflow-y: hidden;
+}
+.svg-button {
+  display: inline-flex;        /* Ajusta al contenido */
+  align-items: center;         /* Centra verticalmente */
+  justify-content: center;     /* Centra horizontalmente */
+  padding: 0;                  /* Elimina padding interno */
+  border: none;                /* Quita borde */
+  background: transparent;     /* Fondo transparente */
+  cursor: pointer;
+  width: 32px;                 /* Ancho del botón */
+  height: 32px;                /* Alto del botón */
+}
+
+.svg-button svg {
+  width: 24px;                 /* Tamaño del ícono */
+  height: 24px;
+  display: block;              /* Quita espacio en línea */
+  stroke: #ffffff;             /* Color base blanco */
+  transition: stroke 0.2s ease; /* Transición suave al hover */
+}
+
+.svg-button:hover svg circle,
+.svg-button:hover svg line {
+  stroke: #1115ff;             /* Color al pasar el mouse */
+}
